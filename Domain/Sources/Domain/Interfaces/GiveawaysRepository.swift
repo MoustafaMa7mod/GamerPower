@@ -7,5 +7,5 @@
 
 public protocol GiveawaysRepository {
     
-    func fetchGetGiveaways() async throws -> [GiveawayItems]
+    func fetchGetGiveaways() async throws -> [GiveawayItem]
 }

@@ -1,5 +1,5 @@
 //
-//  GiveawaysDataModel.swift
+//  GiveawayDataModel.swift
 //  Data
 //
 //  Created by Mostafa Mahmoud on 13/02/2025.
@@ -7,7 +7,7 @@
 
 import Domain
 
-public struct GiveawaysDataModel: Codable {
+public struct GiveawayDataModel: Codable {
     
     let id: Int?
     let title: String?
@@ -25,8 +25,8 @@ public struct GiveawaysDataModel: Codable {
         case id, title, worth, image, description, instructions, type, platforms, users
     }
 
-    public func toDomain() -> GiveawayItems {
-        GiveawayItems(
+    public func toDomain() -> GiveawayItem {
+        GiveawayItem(
             id: id ?? 0,
             title: title ?? "",
             worth: worth ?? "",

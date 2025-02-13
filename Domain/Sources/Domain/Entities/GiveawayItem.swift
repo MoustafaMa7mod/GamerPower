@@ -1,11 +1,11 @@
 //
-//  GiveawayItems.swift
+//  GiveawayItem.swift
 //  Domain
 //
 //  Created by Mostafa Mahmoud on 13/02/2025.
 //
 
-public struct GiveawayItems {
+public struct GiveawayItem {
     
     public let id: Int
     public let title: String

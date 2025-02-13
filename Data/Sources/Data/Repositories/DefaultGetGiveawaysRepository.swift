@@ -18,7 +18,7 @@ public final class DefaultGetGiveawaysRepository: GiveawaysRepository {
         self.remote = remote
     }
 
-    public func fetchGetGiveaways() async throws -> [GiveawayItems] {
+    public func fetchGetGiveaways() async throws -> [GiveawayItem] {
         
         let response = try await remote.fetchGetGiveaways()
         return response.map { $0.toDomain() }

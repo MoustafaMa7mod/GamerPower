@@ -25,7 +25,7 @@ extension DefaultGiveawaysFactory {
     
     private func makeGetGiveawaysRemoteAPI() -> GetGiveawaysRemoteAPI {
         DefaultGetGiveawaysRemoteAPI(
-            networkService: NetworkService(baseURL: ConfigurationManager.shared.baseUrl)
+            networkService: NetworkService(baseURL: ConfigurationManager.shared.baseURL)
         )
     }
 }

@@ -7,7 +7,7 @@
 
 public protocol GetGiveawaysUseCase {
     
-    func execute() async throws -> [GiveawayItems]
+    func execute() async throws -> [GiveawayItem]
 }
 
 public final class DefaultGetGiveawaysUseCase: GetGiveawaysUseCase {
@@ -23,7 +23,7 @@ public final class DefaultGetGiveawaysUseCase: GetGiveawaysUseCase {
 
     // MARK: - Methods
     
-    public func execute() async throws -> [GiveawayItems] {
+    public func execute() async throws -> [GiveawayItem] {
         
         try await repository.fetchGetGiveaways()
     }

@@ -5,42 +5,16 @@
 //  Created by Mostafa Mahmoud on 13/02/2025.
 //
 
-import Foundation
-import Domain
+import SwiftUI
 
-final class HomeViewModel: ObservableObject {
-
-    private var useCase: GetGiveawaysUseCase
+protocol HomeViewModel: ObservableObject {
+   
+    var giveawayItems: [GiveawayItemPresentationModel] { get }
+    var platforms: [String] { get }
+    var selectedIndex: Int { get }
+    var isLoading: Bool { get }
+    var isShowError: Bool { get }
+    var errorMessage: String { get }
     
-    init(
-        useCase: GetGiveawaysUseCase
-    ) {
-        self.useCase = useCase
-        
-        loadData()
-    }
-}
-
-// MARK: - Private Methods
-extension HomeViewModel {
-    
-    func loadData() {
-        
-        Task(priority: .background) {
-            
-            do {
-                let items = try await useCase.execute()
-                print("DEBUG: items \(items)")
-                await reloadView()
-            } catch let error {
-                await reloadView()
-            }
-        }
-    }
-    
-    /// Triggers a UI update after the data has been modified.
-    @MainActor
-    private func reloadView() {
-        objectWillChange.send()
-    }
+    func filterTapped(with index: Int)
 }

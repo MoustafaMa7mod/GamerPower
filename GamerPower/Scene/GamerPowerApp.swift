@@ -20,7 +20,7 @@ struct GamerPowerApp: App {
         WindowGroup {
             
             HomeView(
-                viewModel: HomeViewModel(useCase: factory.makeGetGiveawaysUseCase())
+                viewModel: DefaultHomeViewModel(useCase: factory.makeGetGiveawaysUseCase())
             )
         }
     }

@@ -20,7 +20,7 @@ class ConfigurationManager {
 
     /// Retrieves the base URL for network requests from the Info.plist file.
     /// - Returns: A `String` containing the base URL.
-    var baseUrl: String {
+    var baseURL: String {
         Bundle.main.getValueFromInfoPlist(forKey: Constants.PlistKeys.baseURL)!
     }
 }
