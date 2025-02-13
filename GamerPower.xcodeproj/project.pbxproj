@@ -11,6 +11,7 @@
 		995CE0072D5E189D00FBEC1B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 995CE0062D5E189D00FBEC1B /* Moya */; };
 		999D95DC2D5E345800BF9432 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 999D95DB2D5E345800BF9432 /* Data */; };
 		999D95DE2D5E345F00BF9432 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 999D95DD2D5E345F00BF9432 /* Domain */; };
+		999D96B72D5E69B200BF9432 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 999D96B62D5E69B200BF9432 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 				995CE0052D5E189D00FBEC1B /* CombineMoya in Frameworks */,
 				999D95DE2D5E345F00BF9432 /* Domain in Frameworks */,
 				999D95DC2D5E345800BF9432 /* Data in Frameworks */,
+				999D96B72D5E69B200BF9432 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +134,7 @@
 				995CE0062D5E189D00FBEC1B /* Moya */,
 				999D95DB2D5E345800BF9432 /* Data */,
 				999D95DD2D5E345F00BF9432 /* Domain */,
+				999D96B62D5E69B200BF9432 /* Kingfisher */,
 			);
 			productName = GamerPower;
 			productReference = 996DE57E2D5E14820026FF50 /* GamerPower.app */;
@@ -190,6 +193,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				995CE0032D5E189D00FBEC1B /* XCRemoteSwiftPackageReference "Moya" */,
+				999D96B52D5E69B200BF9432 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 996DE57F2D5E14820026FF50 /* Products */;
@@ -509,6 +513,14 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		999D96B52D5E69B200BF9432 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -529,6 +541,11 @@
 		999D95DD2D5E345F00BF9432 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
+		};
+		999D96B62D5E69B200BF9432 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 999D96B52D5E69B200BF9432 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

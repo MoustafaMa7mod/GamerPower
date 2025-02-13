@@ -14,7 +14,7 @@ protocol HomeViewModel: ObservableObject {
     var selectedIndex: Int { get }
     var isLoading: Bool { get }
     var isShowError: Bool { get }
-    var errorMessage: String { get }
+    var errorMessage: String? { get }
     
     func filterTapped(with index: Int)
 }

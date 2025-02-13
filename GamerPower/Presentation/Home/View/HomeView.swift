@@ -13,15 +13,37 @@ struct HomeView<ViewModel>: View where ViewModel: DefaultHomeViewModel {
     
     var body: some View {
         
-        ScrollView(.vertical, showsIndicators: false) {
+        NavigationView {
             
-            platformView
+            if viewModel.isLoading {
+                ProgressView()
+                    .tint(.gray)
+            } else {
+                
+                VStack(alignment: .leading, spacing: 12) {
+                    
+                    platformView
+                    
+                    ScrollView(.vertical, showsIndicators: false) {
+                        cardView
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding(.horizontal, 12)
+                .background(Color.white)
+                .navigationBarTitle("Games Giveaways")
+            }
         }
+        .alert(viewModel.errorMessage ?? "", isPresented: .constant(viewModel.isShowError)) {
+            Button("OK", role: .cancel) { }
+        }
+        
     }
     
     var platformView: some View {
         
         ScrollView(.horizontal, showsIndicators: false) {
+            
             HStack(spacing: 10) {
                 ForEach(Array(viewModel.platforms.enumerated()), id: \.element) { index, item in
                     
@@ -33,7 +55,15 @@ struct HomeView<ViewModel>: View where ViewModel: DefaultHomeViewModel {
                         }
                 }
             }
-            .padding(.horizontal)
+        }
+    }
+    
+    var cardView: some View {
+        
+        ForEach(viewModel.giveawayItems) { item in
+            VStack(alignment: .leading, spacing: 8){
+                GiveawayCard(item: item)
+            }
         }
     }
 }

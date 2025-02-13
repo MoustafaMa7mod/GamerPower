@@ -14,9 +14,9 @@ final class DefaultHomeViewModel: HomeViewModel {
     private(set) var giveawayItems: [GiveawayItemPresentationModel] = []
     private(set) var platforms: [String] = ["all"]
     private(set) var selectedIndex: Int = 0
-    private(set) var isLoading: Bool = false
+    private(set) var isLoading: Bool = true
     private(set) var isShowError: Bool = false
-    private(set) var errorMessage: String = ""
+    private(set) var errorMessage: String?
 
     init(
         useCase: GetGiveawaysUseCase
@@ -68,7 +68,6 @@ extension DefaultHomeViewModel {
     
     @MainActor
     private func handleResponseError(_ error: Error) {
-        isLoading = false
         isShowError = true
         errorMessage = error.localizedDescription
         reloadView()
@@ -77,6 +76,7 @@ extension DefaultHomeViewModel {
     /// Triggers a UI update after the data has been modified.
     @MainActor
     private func reloadView() {
+        isLoading = false
         objectWillChange.send()
     }
 }

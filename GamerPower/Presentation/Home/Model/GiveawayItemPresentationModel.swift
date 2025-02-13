@@ -6,13 +6,14 @@
 //
 
 import Domain
+import SwiftUI
 
 struct GiveawayItemPresentationModel: Identifiable {
  
     let id: Int
     let gameTitle: String
     let gamePrice: String
-    let gameImage: String
+    let image: String
     let gameDescription: String
     let gameInstructions: String
     let expiryDate: String
@@ -20,12 +21,16 @@ struct GiveawayItemPresentationModel: Identifiable {
     let platforms: String
     let numberOfUsers: Int
 
+    var gameImage: URL? {
+        URL(string: "\(image)")
+    }
+    
     init(model: GiveawayItem) {
         
         self.id = model.id
         self.gameTitle = model.title
         self.gamePrice = model.worth
-        self.gameImage = model.image
+        self.image = model.image
         self.gameDescription = model.description
         self.gameInstructions = model.instructions
         self.expiryDate = model.expiryDate
