@@ -23,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		995CDFD12D5E16C600FBEC1B /* NetworkLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkLayer; sourceTree = "<group>"; };
+		995CE0952D5E21B500FBEC1B /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
+		995CE0962D5E21EB00FBEC1B /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		996DE57E2D5E14820026FF50 /* GamerPower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamerPower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		996DE5932D5E14830026FF50 /* GamerPowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GamerPowerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,6 +65,8 @@
 		996DE5752D5E14820026FF50 = {
 			isa = PBXGroup;
 			children = (
+				995CE0962D5E21EB00FBEC1B /* Domain */,
+				995CE0952D5E21B500FBEC1B /* Data */,
 				995CDFD12D5E16C600FBEC1B /* NetworkLayer */,
 				996DE5802D5E14820026FF50 /* GamerPower */,
 				996DE5962D5E14830026FF50 /* GamerPowerTests */,
