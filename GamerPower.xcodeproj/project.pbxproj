@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		995CE0052D5E189D00FBEC1B /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 995CE0042D5E189D00FBEC1B /* CombineMoya */; };
 		995CE0072D5E189D00FBEC1B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 995CE0062D5E189D00FBEC1B /* Moya */; };
+		999D95DC2D5E345800BF9432 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 999D95DB2D5E345800BF9432 /* Data */; };
+		999D95DE2D5E345F00BF9432 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 999D95DD2D5E345F00BF9432 /* Domain */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 			files = (
 				995CE0072D5E189D00FBEC1B /* Moya in Frameworks */,
 				995CE0052D5E189D00FBEC1B /* CombineMoya in Frameworks */,
+				999D95DE2D5E345F00BF9432 /* Domain in Frameworks */,
+				999D95DC2D5E345800BF9432 /* Data in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +74,7 @@
 				995CDFD12D5E16C600FBEC1B /* NetworkLayer */,
 				996DE5802D5E14820026FF50 /* GamerPower */,
 				996DE5962D5E14830026FF50 /* GamerPowerTests */,
+				999D95DA2D5E345800BF9432 /* Frameworks */,
 				996DE57F2D5E14820026FF50 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,6 +86,13 @@
 				996DE5932D5E14830026FF50 /* GamerPowerTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		999D95DA2D5E345800BF9432 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +117,8 @@
 			packageProductDependencies = (
 				995CE0042D5E189D00FBEC1B /* CombineMoya */,
 				995CE0062D5E189D00FBEC1B /* Moya */,
+				999D95DB2D5E345800BF9432 /* Data */,
+				999D95DD2D5E345F00BF9432 /* Domain */,
 			);
 			productName = GamerPower;
 			productReference = 996DE57E2D5E14820026FF50 /* GamerPower.app */;
@@ -344,7 +358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GamerPower/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GamerPower/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 53738PVH36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -374,7 +388,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GamerPower/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"GamerPower/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 53738PVH36;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -488,6 +502,14 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 995CE0032D5E189D00FBEC1B /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		999D95DB2D5E345800BF9432 /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
+		};
+		999D95DD2D5E345F00BF9432 /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
