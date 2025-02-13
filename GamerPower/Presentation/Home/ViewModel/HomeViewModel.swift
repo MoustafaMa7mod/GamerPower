@@ -10,7 +10,7 @@ import SwiftUI
 protocol HomeViewModel: ObservableObject {
    
     var giveawayItems: [GiveawayItemPresentationModel] { get }
-    var platforms: [String] { get }
+    var categories: [String] { get }
     var selectedIndex: Int { get }
     var isLoading: Bool { get }
     var isShowError: Bool { get }

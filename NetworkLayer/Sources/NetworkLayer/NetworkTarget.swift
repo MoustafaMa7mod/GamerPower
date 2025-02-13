@@ -11,7 +11,7 @@ import Foundation
 protocol NetworkTarget: TargetType {
     
     var baseURLString: String { get }
-    var endpointPath: String { get }
+    var requestParameters: [String: Any] { get }
 }
 
 extension NetworkTarget {
@@ -21,12 +21,8 @@ extension NetworkTarget {
         return url
     }
     
-    var path: String {
-        return endpointPath
-    }
-        
     var task: Task {
-        return .requestParameters(parameters: [:], encoding: URLEncoding.queryString)
+        return .requestParameters(parameters: requestParameters, encoding: URLEncoding.queryString)
     }
     
     var headers: [String: String]? {

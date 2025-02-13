@@ -7,7 +7,7 @@
 
 public protocol GetGiveawaysUseCase {
     
-    func execute() async throws -> [GiveawayItem]
+    func execute(queryParameter: String?) async throws -> [GiveawayItem]
 }
 
 public final class DefaultGetGiveawaysUseCase: GetGiveawaysUseCase {
@@ -23,8 +23,8 @@ public final class DefaultGetGiveawaysUseCase: GetGiveawaysUseCase {
 
     // MARK: - Methods
     
-    public func execute() async throws -> [GiveawayItem] {
+    public func execute(queryParameter: String?) async throws -> [GiveawayItem] {
         
-        try await repository.fetchGetGiveaways()
+        try await repository.fetchGetGiveaways(queryParameter: queryParameter)
     }
 }

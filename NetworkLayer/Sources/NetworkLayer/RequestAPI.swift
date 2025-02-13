@@ -4,7 +4,7 @@
 import Moya
 
 enum API {
-    case urlRequest(baseURL: String, path: String)
+    case urlRequest(baseURL: String, requestParameters: [String : Any])
 }
 
 extension API: NetworkTarget {
@@ -16,10 +16,14 @@ extension API: NetworkTarget {
         }
     }
     
-    var endpointPath: String {
+    var path: String {
+        return ""
+    }
+    
+    var requestParameters: [String : Any] {
         switch self {
-        case .urlRequest(_, let path):
-            return path
+        case .urlRequest(_, let parameters):
+            return parameters
         }
     }
     

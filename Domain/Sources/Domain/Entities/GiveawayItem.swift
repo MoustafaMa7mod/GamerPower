@@ -15,7 +15,7 @@ public struct GiveawayItem {
     public let instructions: String
     public let expiryDate: String
     public let gameType: String
-    public let platforms: String
+    public let category: String
     public let numberOfUsers: Int
 
     public init(
@@ -38,7 +38,7 @@ public struct GiveawayItem {
         self.instructions = instructions
         self.expiryDate = expiryDate
         self.gameType = gameType
-        self.platforms = platforms
+        self.category = platforms
         self.numberOfUsers = numberOfUsers
     }
 }

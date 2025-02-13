@@ -18,7 +18,7 @@ struct GiveawayItemPresentationModel: Identifiable {
     let gameInstructions: String
     let expiryDate: String
     let gameType: String
-    let platforms: String
+    let categoryName: String
     let numberOfUsers: Int
 
     var gameImage: URL? {
@@ -35,7 +35,7 @@ struct GiveawayItemPresentationModel: Identifiable {
         self.gameInstructions = model.instructions
         self.expiryDate = model.expiryDate
         self.gameType = model.gameType
-        self.platforms = model.platforms
+        self.categoryName = model.category
         self.numberOfUsers = model.numberOfUsers
     }
 }

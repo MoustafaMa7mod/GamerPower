@@ -65,7 +65,7 @@ struct GiveawayCard: View {
     
     var gameCategory: some View {
         
-        Text(item.platforms)
+        Text(item.categoryName)
             .font(.system(size: 16, weight: .light))
             .foregroundColor(.white)
     }

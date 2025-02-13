@@ -45,7 +45,7 @@ struct HomeView<ViewModel>: View where ViewModel: DefaultHomeViewModel {
         ScrollView(.horizontal, showsIndicators: false) {
             
             HStack(spacing: 10) {
-                ForEach(Array(viewModel.platforms.enumerated()), id: \.element) { index, item in
+                ForEach(Array(viewModel.categories.enumerated()), id: \.element) { index, item in
                     
                     Text(item)
                         .fontWeight(viewModel.selectedIndex == index ? .bold : .regular)

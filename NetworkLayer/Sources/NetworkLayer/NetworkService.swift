@@ -22,10 +22,9 @@ public class NetworkService: Networkable {
     }
     
     public func fetchData<T: Decodable>(
-        path: String
+        requestParameters: [String : Any]
     ) async throws -> T {
-        
-        let urlRequest = API.urlRequest(baseURL: baseURL, path: path)
+        let urlRequest = API.urlRequest(baseURL: baseURL, requestParameters: requestParameters)
         return try await request(request: urlRequest)
     }
 }

@@ -8,7 +8,7 @@
 import NetworkLayer
 
 public protocol GetGiveawaysRemoteAPI {
-    func fetchGetGiveaways() async throws -> [GiveawayDataModel]
+    func fetchGetGiveaways(queryParameter: String?) async throws -> [GiveawayDataModel]
 }
 
 public final class DefaultGetGiveawaysRemoteAPI: GetGiveawaysRemoteAPI {
@@ -21,10 +21,15 @@ public final class DefaultGetGiveawaysRemoteAPI: GetGiveawaysRemoteAPI {
         self.networkService = networkService
     }
     
-    public func fetchGetGiveaways() async throws -> [GiveawayDataModel] {
+    public func fetchGetGiveaways(queryParameter: String?) async throws -> [GiveawayDataModel] {
+        var parameters: [String: Any] = [:]
+        
+        if let queryParameter {
+            parameters["platform"] = queryParameter
+        }
         
         let result: [GiveawayDataModel] = try await networkService.fetchData(
-            path: Constants.Paths.giveaways
+            requestParameters: parameters
         )
 
         return result
