@@ -15,14 +15,17 @@ struct GiveawayItemPresentationModel: Identifiable {
     let gamePrice: String
     let image: String
     let gameDescription: String
-    let gameInstructions: String
     let expiryDate: String
     let gameType: String
     let categoryName: String
-    let numberOfUsers: Int
+    let numberOfUsers: String
 
     var gameImage: URL? {
         URL(string: "\(image)")
+    }
+    
+    var giveawayEndData: String {
+        expiryDate.formattedDate
     }
     
     init(model: GiveawayItem) {
@@ -32,11 +35,10 @@ struct GiveawayItemPresentationModel: Identifiable {
         self.gamePrice = model.worth
         self.image = model.image
         self.gameDescription = model.description
-        self.gameInstructions = model.instructions
         self.expiryDate = model.expiryDate
         self.gameType = model.gameType
         self.categoryName = model.category
-        self.numberOfUsers = model.numberOfUsers
+        self.numberOfUsers = "\(model.numberOfUsers)"
     }
 }
 

@@ -12,7 +12,6 @@ public struct GiveawayItem {
     public let worth: String
     public let image: String
     public let description: String
-    public let instructions: String
     public let expiryDate: String
     public let gameType: String
     public let category: String
@@ -24,7 +23,6 @@ public struct GiveawayItem {
         worth: String,
         image: String,
         description: String,
-        instructions: String,
         expiryDate: String,
         gameType: String,
         platforms: String,
@@ -35,7 +33,6 @@ public struct GiveawayItem {
         self.worth = worth
         self.image = image
         self.description = description
-        self.instructions = instructions
         self.expiryDate = expiryDate
         self.gameType = gameType
         self.category = platforms

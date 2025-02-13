@@ -14,7 +14,6 @@ public struct GiveawayDataModel: Codable {
     let worth: String?
     let image: String?
     let description: String?
-    let instructions: String?
     let endDate: String?
     let type: String?
     let platforms: String?
@@ -22,7 +21,7 @@ public struct GiveawayDataModel: Codable {
     
     enum CodingKeys: String, CodingKey {
         case endDate = "end_date"
-        case id, title, worth, image, description, instructions, type, platforms, users
+        case id, title, worth, image, description, type, platforms, users
     }
 
     public func toDomain() -> GiveawayItem {
@@ -32,7 +31,6 @@ public struct GiveawayDataModel: Codable {
             worth: worth ?? "",
             image: image ?? "",
             description: description ?? "",
-            instructions: instructions ?? "",
             expiryDate: endDate ?? "",
             gameType: type ?? "",
             platforms: platforms ?? "",
