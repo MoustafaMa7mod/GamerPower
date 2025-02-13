@@ -14,13 +14,15 @@ protocol Networkable {
 
 public class NetworkService: Networkable {
     
+    private var baseURL: String
     var provider = MoyaProvider<API>(plugins: [NetworkLoggerPlugin()])
-
-    public init () {}
+    
+    public init (baseURL: String) {
+        self.baseURL = baseURL
+    }
     
     public func fetchData<T: Decodable>(
-        baseURL: String,
-        path: String = ""
+        path: String
     ) async throws -> T {
         
         let urlRequest = API.urlRequest(baseURL: baseURL, path: path)

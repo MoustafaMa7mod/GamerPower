@@ -17,14 +17,14 @@ public final class DefaultGetGiveawaysRemoteAPI: GetGiveawaysRemoteAPI {
 
     // MARK: - Life cycle
     
-    public init(networkService: NetworkService = NetworkService()) {
+    public init(networkService: NetworkService) {
         self.networkService = networkService
     }
     
     public func fetchGetGiveaways() async throws -> [GiveawaysDataModel] {
         
         let result: [GiveawaysDataModel] = try await networkService.fetchData(
-            baseURL: "https://www.gamerpower.com/api/giveaways"
+            path: Constants.Paths.giveaways
         )
 
         return result
