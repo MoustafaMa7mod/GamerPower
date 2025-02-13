@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		995CE0052D5E189D00FBEC1B /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 995CE0042D5E189D00FBEC1B /* CombineMoya */; };
+		995CE0072D5E189D00FBEC1B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 995CE0062D5E189D00FBEC1B /* Moya */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		996DE5942D5E14830026FF50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -53,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995CE0072D5E189D00FBEC1B /* Moya in Frameworks */,
+				995CE0052D5E189D00FBEC1B /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +121,8 @@
 			);
 			name = GamerPower;
 			packageProductDependencies = (
+				995CE0042D5E189D00FBEC1B /* CombineMoya */,
+				995CE0062D5E189D00FBEC1B /* Moya */,
 			);
 			productName = GamerPower;
 			productReference = 996DE57E2D5E14820026FF50 /* GamerPower.app */;
@@ -197,6 +206,9 @@
 			);
 			mainGroup = 996DE5752D5E14820026FF50;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				995CE0032D5E189D00FBEC1B /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 996DE57F2D5E14820026FF50 /* Products */;
 			projectDirPath = "";
@@ -562,6 +574,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		995CE0032D5E189D00FBEC1B /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		995CE0042D5E189D00FBEC1B /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 995CE0032D5E189D00FBEC1B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		995CE0062D5E189D00FBEC1B /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 995CE0032D5E189D00FBEC1B /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 996DE5762D5E14820026FF50 /* Project object */;
 }
