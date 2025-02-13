@@ -37,7 +37,6 @@ struct HomeView<ViewModel>: View where ViewModel: DefaultHomeViewModel {
         .alert(viewModel.errorMessage ?? "", isPresented: .constant(viewModel.isShowError)) {
             Button("OK", role: .cancel) { }
         }
-        
     }
     
     var platformView: some View {
@@ -62,7 +61,16 @@ struct HomeView<ViewModel>: View where ViewModel: DefaultHomeViewModel {
         
         ForEach(viewModel.giveawayItems) { item in
             VStack(alignment: .leading, spacing: 8){
-                GiveawayCard(item: item)
+                
+                NavigationLink(
+                    destination: DetailsView(
+                        viewModel: DefaultDetailsViewModel(
+                            item: item
+                        )
+                    )
+                ) {
+                    GiveawayCard(item: item)
+                }
             }
         }
     }
