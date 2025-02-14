@@ -9,31 +9,41 @@ import SwiftUI
 
 struct MoreCategoriesView: View {
     
-    @State var items: [String: [GiveawayItemPresentationModel]] = [:]
+    @State var items: [String: [GiveawayItemPresentationModel]]
+    private var viewHeight: CGFloat
+    
+    init(items: [String : [GiveawayItemPresentationModel]] = [:], viewHeight: CGFloat = 220) {
+        self.items = items
+        self.viewHeight = viewHeight
+    }
     
     var body: some View {
         
-        NavigationView {
-            ScrollView {
-                VStack(alignment: .leading) {
-                    ForEach(items.keys.sorted(), id: \.self) { category in
-                        Section(header: Text(category)
-                            .font(.headline)
-                            .padding(.horizontal)
-                        ) {
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack {
-                                    ForEach(items[category] ?? []) { giveaway in
-                                        GiveawayCard(item: giveaway)
-                                    }
-                                }
-                                .padding(.horizontal)
-                            }
-                        }
-                    }
+        ScrollView(.vertical, showsIndicators: false) {
+            
+            VStack(alignment: .leading) {
+                sectionsView
+            }
+        }
+        .padding(.top, 12)
+    }
+    
+    var sectionsView: some View {
+        
+        ForEach(items.keys.sorted(), id: \.self) { category in
+            
+            Section(header: Text(category)
+                .font(.headline)
+                .padding(.horizontal, 12)
+                .padding(.bottom, 2)
+            ) {
+                
+                if let categories = items[category] {
+                    
+                    CarouselScrollView(items: categories)
+                        .padding(.top, 0)
                 }
             }
-            
         }
     }
 }

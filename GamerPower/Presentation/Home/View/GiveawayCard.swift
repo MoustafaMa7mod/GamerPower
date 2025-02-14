@@ -11,6 +11,7 @@ import Kingfisher
 struct GiveawayCard: View {
     
     var item: GiveawayItemPresentationModel
+    var viewHeight: CGFloat
     
     var body: some View {
         
@@ -27,7 +28,7 @@ struct GiveawayCard: View {
             }
             .padding(12)
         }
-        .frame(height: 350)
+        .frame(height: viewHeight)
         .cornerRadius(15)
         .shadow(radius: 5)
     }
@@ -43,7 +44,7 @@ struct GiveawayCard: View {
                 }
                 .resizable()
                 .scaledToFill()
-                .frame(width: UIScreen.main.bounds.width - 32, height: 350)
+                .frame(width: UIScreen.main.bounds.width - 32, height: viewHeight)
                 .clipped()
                 .overlay(
                     LinearGradient(

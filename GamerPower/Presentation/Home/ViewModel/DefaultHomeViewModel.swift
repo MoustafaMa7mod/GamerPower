@@ -13,6 +13,7 @@ final class DefaultHomeViewModel: HomeViewModel {
     private var useCase: GetGiveawaysUseCase
     private var maxCategoriesNumber: Int = 3
     private weak var coordinator: AppCoordinator?
+    
     private(set) var giveawayItems: [GiveawayItemPresentationModel] = []
     private(set) var moreCategoriesGiveaways: [String: [GiveawayItemPresentationModel]] = [:]
     private(set) var homeCategories: [String] = ["all"]

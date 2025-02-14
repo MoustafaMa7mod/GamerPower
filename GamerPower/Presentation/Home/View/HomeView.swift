@@ -61,7 +61,7 @@ struct HomeView<ViewModel>: View where ViewModel: DefaultHomeViewModel {
         
         ForEach(viewModel.giveawayItems) { item in
             VStack(alignment: .leading, spacing: 8){
-                GiveawayCard(item: item)
+                GiveawayCard(item: item, viewHeight: 350)
                     .onTapGesture {
                         viewModel.navigateToDetails(item: item)
                     }
