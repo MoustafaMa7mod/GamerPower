@@ -7,51 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		995CE0052D5E189D00FBEC1B /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 995CE0042D5E189D00FBEC1B /* CombineMoya */; };
-		995CE0072D5E189D00FBEC1B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 995CE0062D5E189D00FBEC1B /* Moya */; };
-		999D95DC2D5E345800BF9432 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 999D95DB2D5E345800BF9432 /* Data */; };
-		999D95DE2D5E345F00BF9432 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 999D95DD2D5E345F00BF9432 /* Domain */; };
-		999D96B72D5E69B200BF9432 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 999D96B62D5E69B200BF9432 /* Kingfisher */; };
+		999D983D2D5F846A00BF9432 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 999D983C2D5F846A00BF9432 /* Kingfisher */; };
+		999D98402D5F848300BF9432 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 999D983F2D5F848300BF9432 /* CombineMoya */; };
+		999D98422D5F848300BF9432 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 999D98412D5F848300BF9432 /* Moya */; };
+		999D987A2D5F852B00BF9432 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 999D98792D5F852B00BF9432 /* Domain */; };
+		999D987C2D5F852F00BF9432 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 999D987B2D5F852F00BF9432 /* Data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		996DE5942D5E14830026FF50 /* PBXContainerItemProxy */ = {
+		999D97DF2D5F83B400BF9432 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 996DE5762D5E14820026FF50 /* Project object */;
+			containerPortal = 999D97BD2D5F83B300BF9432 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 996DE57D2D5E14820026FF50;
+			remoteGlobalIDString = 999D97C42D5F83B300BF9432;
 			remoteInfo = GamerPower;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		995CDFD12D5E16C600FBEC1B /* NetworkLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkLayer; sourceTree = "<group>"; };
-		995CE0952D5E21B500FBEC1B /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
-		995CE0962D5E21EB00FBEC1B /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
-		996DE57E2D5E14820026FF50 /* GamerPower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamerPower.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		996DE5932D5E14830026FF50 /* GamerPowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GamerPowerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		999D97C52D5F83B300BF9432 /* GamerPower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamerPower.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		999D97DE2D5F83B400BF9432 /* GamerPowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GamerPowerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		999D98382D5F83E200BF9432 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
+		999D98392D5F83E600BF9432 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
+		999D983A2D5F83E900BF9432 /* NetworkLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkLayer; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		999D95E42D5E41D300BF9432 /* Exceptions for "GamerPower" folder in "GamerPower" target */ = {
+		999D97F02D5F83B400BF9432 /* Exceptions for "GamerPower" folder in "GamerPower" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 996DE57D2D5E14820026FF50 /* GamerPower */;
+			target = 999D97C42D5F83B300BF9432 /* GamerPower */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		996DE5802D5E14820026FF50 /* GamerPower */ = {
+		999D97C72D5F83B300BF9432 /* GamerPower */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				999D95E42D5E41D300BF9432 /* Exceptions for "GamerPower" folder in "GamerPower" target */,
+				999D97F02D5F83B400BF9432 /* Exceptions for "GamerPower" folder in "GamerPower" target */,
 			);
 			path = GamerPower;
 			sourceTree = "<group>";
 		};
-		996DE5962D5E14830026FF50 /* GamerPowerTests */ = {
+		999D97E12D5F83B400BF9432 /* GamerPowerTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = GamerPowerTests;
 			sourceTree = "<group>";
@@ -59,19 +59,19 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		996DE57B2D5E14820026FF50 /* Frameworks */ = {
+		999D97C22D5F83B300BF9432 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				995CE0072D5E189D00FBEC1B /* Moya in Frameworks */,
-				995CE0052D5E189D00FBEC1B /* CombineMoya in Frameworks */,
-				999D95DE2D5E345F00BF9432 /* Domain in Frameworks */,
-				999D95DC2D5E345800BF9432 /* Data in Frameworks */,
-				999D96B72D5E69B200BF9432 /* Kingfisher in Frameworks */,
+				999D98402D5F848300BF9432 /* CombineMoya in Frameworks */,
+				999D983D2D5F846A00BF9432 /* Kingfisher in Frameworks */,
+				999D987C2D5F852F00BF9432 /* Data in Frameworks */,
+				999D987A2D5F852B00BF9432 /* Domain in Frameworks */,
+				999D98422D5F848300BF9432 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		996DE5902D5E14830026FF50 /* Frameworks */ = {
+		999D97DB2D5F83B400BF9432 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,29 +81,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		996DE5752D5E14820026FF50 = {
+		999D97BC2D5F83B300BF9432 = {
 			isa = PBXGroup;
 			children = (
-				995CE0962D5E21EB00FBEC1B /* Domain */,
-				995CE0952D5E21B500FBEC1B /* Data */,
-				995CDFD12D5E16C600FBEC1B /* NetworkLayer */,
-				996DE5802D5E14820026FF50 /* GamerPower */,
-				996DE5962D5E14830026FF50 /* GamerPowerTests */,
-				999D95DA2D5E345800BF9432 /* Frameworks */,
-				996DE57F2D5E14820026FF50 /* Products */,
+				999D983A2D5F83E900BF9432 /* NetworkLayer */,
+				999D98392D5F83E600BF9432 /* Data */,
+				999D98382D5F83E200BF9432 /* Domain */,
+				999D97C72D5F83B300BF9432 /* GamerPower */,
+				999D97E12D5F83B400BF9432 /* GamerPowerTests */,
+				999D98782D5F852B00BF9432 /* Frameworks */,
+				999D97C62D5F83B300BF9432 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		996DE57F2D5E14820026FF50 /* Products */ = {
+		999D97C62D5F83B300BF9432 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				996DE57E2D5E14820026FF50 /* GamerPower.app */,
-				996DE5932D5E14830026FF50 /* GamerPowerTests.xctest */,
+				999D97C52D5F83B300BF9432 /* GamerPower.app */,
+				999D97DE2D5F83B400BF9432 /* GamerPowerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		999D95DA2D5E345800BF9432 /* Frameworks */ = {
+		999D98782D5F852B00BF9432 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -113,108 +113,108 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		996DE57D2D5E14820026FF50 /* GamerPower */ = {
+		999D97C42D5F83B300BF9432 /* GamerPower */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 996DE5A72D5E14830026FF50 /* Build configuration list for PBXNativeTarget "GamerPower" */;
+			buildConfigurationList = 999D97F12D5F83B400BF9432 /* Build configuration list for PBXNativeTarget "GamerPower" */;
 			buildPhases = (
-				996DE57A2D5E14820026FF50 /* Sources */,
-				996DE57B2D5E14820026FF50 /* Frameworks */,
-				996DE57C2D5E14820026FF50 /* Resources */,
+				999D97C12D5F83B300BF9432 /* Sources */,
+				999D97C22D5F83B300BF9432 /* Frameworks */,
+				999D97C32D5F83B300BF9432 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				996DE5802D5E14820026FF50 /* GamerPower */,
+				999D97C72D5F83B300BF9432 /* GamerPower */,
 			);
 			name = GamerPower;
 			packageProductDependencies = (
-				995CE0042D5E189D00FBEC1B /* CombineMoya */,
-				995CE0062D5E189D00FBEC1B /* Moya */,
-				999D95DB2D5E345800BF9432 /* Data */,
-				999D95DD2D5E345F00BF9432 /* Domain */,
-				999D96B62D5E69B200BF9432 /* Kingfisher */,
+				999D983C2D5F846A00BF9432 /* Kingfisher */,
+				999D983F2D5F848300BF9432 /* CombineMoya */,
+				999D98412D5F848300BF9432 /* Moya */,
+				999D98792D5F852B00BF9432 /* Domain */,
+				999D987B2D5F852F00BF9432 /* Data */,
 			);
 			productName = GamerPower;
-			productReference = 996DE57E2D5E14820026FF50 /* GamerPower.app */;
+			productReference = 999D97C52D5F83B300BF9432 /* GamerPower.app */;
 			productType = "com.apple.product-type.application";
 		};
-		996DE5922D5E14830026FF50 /* GamerPowerTests */ = {
+		999D97DD2D5F83B400BF9432 /* GamerPowerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 996DE5AA2D5E14830026FF50 /* Build configuration list for PBXNativeTarget "GamerPowerTests" */;
+			buildConfigurationList = 999D97F62D5F83B400BF9432 /* Build configuration list for PBXNativeTarget "GamerPowerTests" */;
 			buildPhases = (
-				996DE58F2D5E14830026FF50 /* Sources */,
-				996DE5902D5E14830026FF50 /* Frameworks */,
-				996DE5912D5E14830026FF50 /* Resources */,
+				999D97DA2D5F83B400BF9432 /* Sources */,
+				999D97DB2D5F83B400BF9432 /* Frameworks */,
+				999D97DC2D5F83B400BF9432 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				996DE5952D5E14830026FF50 /* PBXTargetDependency */,
+				999D97E02D5F83B400BF9432 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				996DE5962D5E14830026FF50 /* GamerPowerTests */,
+				999D97E12D5F83B400BF9432 /* GamerPowerTests */,
 			);
 			name = GamerPowerTests;
 			packageProductDependencies = (
 			);
 			productName = GamerPowerTests;
-			productReference = 996DE5932D5E14830026FF50 /* GamerPowerTests.xctest */;
+			productReference = 999D97DE2D5F83B400BF9432 /* GamerPowerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		996DE5762D5E14820026FF50 /* Project object */ = {
+		999D97BD2D5F83B300BF9432 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
-					996DE57D2D5E14820026FF50 = {
+					999D97C42D5F83B300BF9432 = {
 						CreatedOnToolsVersion = 16.1;
 					};
-					996DE5922D5E14830026FF50 = {
+					999D97DD2D5F83B400BF9432 = {
 						CreatedOnToolsVersion = 16.1;
-						TestTargetID = 996DE57D2D5E14820026FF50;
+						TestTargetID = 999D97C42D5F83B300BF9432;
 					};
 				};
 			};
-			buildConfigurationList = 996DE5792D5E14820026FF50 /* Build configuration list for PBXProject "GamerPower" */;
+			buildConfigurationList = 999D97C02D5F83B300BF9432 /* Build configuration list for PBXProject "GamerPower" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 996DE5752D5E14820026FF50;
+			mainGroup = 999D97BC2D5F83B300BF9432;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				995CE0032D5E189D00FBEC1B /* XCRemoteSwiftPackageReference "Moya" */,
-				999D96B52D5E69B200BF9432 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				999D983B2D5F846A00BF9432 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				999D983E2D5F848300BF9432 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 996DE57F2D5E14820026FF50 /* Products */;
+			productRefGroup = 999D97C62D5F83B300BF9432 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				996DE57D2D5E14820026FF50 /* GamerPower */,
-				996DE5922D5E14830026FF50 /* GamerPowerTests */,
+				999D97C42D5F83B300BF9432 /* GamerPower */,
+				999D97DD2D5F83B400BF9432 /* GamerPowerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		996DE57C2D5E14820026FF50 /* Resources */ = {
+		999D97C32D5F83B300BF9432 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		996DE5912D5E14830026FF50 /* Resources */ = {
+		999D97DC2D5F83B400BF9432 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -224,14 +224,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		996DE57A2D5E14820026FF50 /* Sources */ = {
+		999D97C12D5F83B300BF9432 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		996DE58F2D5E14830026FF50 /* Sources */ = {
+		999D97DA2D5F83B400BF9432 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -241,15 +241,77 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		996DE5952D5E14830026FF50 /* PBXTargetDependency */ = {
+		999D97E02D5F83B400BF9432 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 996DE57D2D5E14820026FF50 /* GamerPower */;
-			targetProxy = 996DE5942D5E14830026FF50 /* PBXContainerItemProxy */;
+			target = 999D97C42D5F83B300BF9432 /* GamerPower */;
+			targetProxy = 999D97DF2D5F83B400BF9432 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		996DE5A52D5E14830026FF50 /* Debug */ = {
+		999D97F22D5F83B400BF9432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 999D97C72D5F83B300BF9432 /* GamerPower */;
+			baseConfigurationReferenceRelativePath = Managers/Configurations/Configuration.xcconfig;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 53738PVH36;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GamerPower/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mostafa.GamerPower;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		999D97F32D5F83B400BF9432 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 999D97C72D5F83B300BF9432 /* GamerPower */;
+			baseConfigurationReferenceRelativePath = Managers/Configurations/Configuration.xcconfig;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 53738PVH36;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GamerPower/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mostafa.GamerPower;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		999D97F42D5F83B400BF9432 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -312,7 +374,7 @@
 			};
 			name = Debug;
 		};
-		996DE5A62D5E14830026FF50 /* Release */ = {
+		999D97F52D5F83B400BF9432 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -368,73 +430,7 @@
 			};
 			name = Release;
 		};
-		996DE5A82D5E14830026FF50 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = 996DE5802D5E14820026FF50 /* GamerPower */;
-			baseConfigurationReferenceRelativePath = Managers/Configurations/Configuration.xcconfig;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GamerPower/Assets/Preview Content\"";
-				DEVELOPMENT_TEAM = 53738PVH36;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GamerPower/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mostafa.GamerPower;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		996DE5A92D5E14830026FF50 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReferenceAnchor = 996DE5802D5E14820026FF50 /* GamerPower */;
-			baseConfigurationReferenceRelativePath = Managers/Configurations/Configuration.xcconfig;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GamerPower/Assets/Preview Content\"";
-				DEVELOPMENT_TEAM = 53738PVH36;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GamerPower/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mostafa.GamerPower;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		996DE5AB2D5E14830026FF50 /* Debug */ = {
+		999D97F72D5F83B400BF9432 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -453,7 +449,7 @@
 			};
 			name = Debug;
 		};
-		996DE5AC2D5E14830026FF50 /* Release */ = {
+		999D97F82D5F83B400BF9432 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,29 +471,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		996DE5792D5E14820026FF50 /* Build configuration list for PBXProject "GamerPower" */ = {
+		999D97C02D5F83B300BF9432 /* Build configuration list for PBXProject "GamerPower" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				996DE5A52D5E14830026FF50 /* Debug */,
-				996DE5A62D5E14830026FF50 /* Release */,
+				999D97F42D5F83B400BF9432 /* Debug */,
+				999D97F52D5F83B400BF9432 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		996DE5A72D5E14830026FF50 /* Build configuration list for PBXNativeTarget "GamerPower" */ = {
+		999D97F12D5F83B400BF9432 /* Build configuration list for PBXNativeTarget "GamerPower" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				996DE5A82D5E14830026FF50 /* Debug */,
-				996DE5A92D5E14830026FF50 /* Release */,
+				999D97F22D5F83B400BF9432 /* Debug */,
+				999D97F32D5F83B400BF9432 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		996DE5AA2D5E14830026FF50 /* Build configuration list for PBXNativeTarget "GamerPowerTests" */ = {
+		999D97F62D5F83B400BF9432 /* Build configuration list for PBXNativeTarget "GamerPowerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				996DE5AB2D5E14830026FF50 /* Debug */,
-				996DE5AC2D5E14830026FF50 /* Release */,
+				999D97F72D5F83B400BF9432 /* Debug */,
+				999D97F82D5F83B400BF9432 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -505,15 +501,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		995CE0032D5E189D00FBEC1B /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.3;
-			};
-		};
-		999D96B52D5E69B200BF9432 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		999D983B2D5F846A00BF9432 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -521,33 +509,41 @@
 				minimumVersion = 8.2.0;
 			};
 		};
+		999D983E2D5F848300BF9432 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		995CE0042D5E189D00FBEC1B /* CombineMoya */ = {
+		999D983C2D5F846A00BF9432 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 995CE0032D5E189D00FBEC1B /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 999D983B2D5F846A00BF9432 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		999D983F2D5F848300BF9432 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 999D983E2D5F848300BF9432 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = CombineMoya;
 		};
-		995CE0062D5E189D00FBEC1B /* Moya */ = {
+		999D98412D5F848300BF9432 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 995CE0032D5E189D00FBEC1B /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 999D983E2D5F848300BF9432 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
-		999D95DB2D5E345800BF9432 /* Data */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Data;
-		};
-		999D95DD2D5E345F00BF9432 /* Domain */ = {
+		999D98792D5F852B00BF9432 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
 		};
-		999D96B62D5E69B200BF9432 /* Kingfisher */ = {
+		999D987B2D5F852F00BF9432 /* Data */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 999D96B52D5E69B200BF9432 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
+			productName = Data;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 996DE5762D5E14820026FF50 /* Project object */;
+	rootObject = 999D97BD2D5F83B300BF9432 /* Project object */;
 }
