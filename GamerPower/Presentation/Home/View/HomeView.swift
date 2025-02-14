@@ -13,7 +13,7 @@ struct HomeView<ViewModel>: View where ViewModel: DefaultHomeViewModel {
     
     var body: some View {
         
-        NavigationView {
+        VStack(alignment: .leading, spacing: 0) {
             
             if viewModel.isLoading {
                 ProgressView()
@@ -61,16 +61,10 @@ struct HomeView<ViewModel>: View where ViewModel: DefaultHomeViewModel {
         
         ForEach(viewModel.giveawayItems) { item in
             VStack(alignment: .leading, spacing: 8){
-                
-                NavigationLink(
-                    destination: DetailsView(
-                        viewModel: DefaultDetailsViewModel(
-                            item: item
-                        )
-                    )
-                ) {
-                    GiveawayCard(item: item)
-                }
+                GiveawayCard(item: item)
+                    .onTapGesture {
+                        viewModel.navigateToDetails(item: item)
+                    }
             }
         }
     }

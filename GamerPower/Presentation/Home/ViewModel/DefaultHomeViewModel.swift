@@ -12,6 +12,7 @@ final class DefaultHomeViewModel: HomeViewModel {
 
     private var useCase: GetGiveawaysUseCase
     private var maxCategoriesNumber: Int = 3
+    private weak var coordinator: HomeCoordinator?
     private(set) var giveawayItems: [GiveawayItemPresentationModel] = []
     private(set) var moreCategoriesGiveaways: [String: [GiveawayItemPresentationModel]] = [:]
     private(set) var homeCategories: [String] = ["all"]
@@ -20,8 +21,9 @@ final class DefaultHomeViewModel: HomeViewModel {
     private(set) var isShowError: Bool = false
     private(set) var errorMessage: String?
 
-    init(useCase: GetGiveawaysUseCase) {
+    init(useCase: GetGiveawaysUseCase, coordinator: HomeCoordinator?) {
         self.useCase = useCase
+        self.coordinator = coordinator
         
         loadData(filterData: false)
     }
@@ -46,6 +48,10 @@ final class DefaultHomeViewModel: HomeViewModel {
                 )
             )
         }
+    }
+    
+    func navigateToDetails(item: GiveawayItemPresentationModel) {
+        coordinator?.navigateToDetails(item: item)
     }
 }
 

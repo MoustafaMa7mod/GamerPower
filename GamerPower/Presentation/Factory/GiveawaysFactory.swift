@@ -6,8 +6,15 @@
 //
 
 import Domain
+import SwiftUI
 
 protocol GiveawaysFactory {
     
-    func makeGetGiveawaysUseCase() -> GetGiveawaysUseCase
+    func makeHomeView(
+        coordinator: HomeCoordinator?
+    ) -> UIHostingController<HomeView<DefaultHomeViewModel>>
+    
+    func makeDetailsView(
+        item: GiveawayItemPresentationModel
+    ) -> UIHostingController<DetailsView<DefaultDetailsViewModel>>
 }

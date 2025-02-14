@@ -14,32 +14,29 @@ struct DetailsView<ViewModel>: View where ViewModel: DefaultDetailsViewModel {
     
     var body: some View {
         
-        NavigationView {
+        VStack(alignment: .leading, spacing: 12) {
             
-            VStack(alignment: .leading, spacing: 12) {
-                    
-                ScrollView(.vertical, showsIndicators: false) {
-                    cardImage
-                    HStack(alignment: .center, spacing: 2) {
-                        gamePrice
-                        divider
-                        numberOfUsers
-                        divider
-                        gameType
-                    }
-                    .padding(.vertical, 8)
-                    
-                    VStack(alignment: .leading, spacing: 12) {
-                        gameCategory
-                        giveawayEndData
-                        gameDescription
-                    }
+            ScrollView(.vertical, showsIndicators: false) {
+                cardImage
+                HStack(alignment: .center, spacing: 2) {
+                    gamePrice
+                    divider
+                    numberOfUsers
+                    divider
+                    gameType
+                }
+                .padding(.vertical, 8)
+                
+                VStack(alignment: .leading, spacing: 12) {
+                    gameCategory
+                    giveawayEndData
+                    gameDescription
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding(.horizontal, 12)
-            .background(Color.white)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(.horizontal, 12)
+        .background(Color.white)
     }
     
     var cardImage: some View {

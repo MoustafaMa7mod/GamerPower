@@ -18,4 +18,5 @@ protocol HomeViewModel: ObservableObject {
     var errorMessage: String? { get }
     
     func filterTapped(with index: Int)
+    func navigateToDetails(item: GiveawayItemPresentationModel)
 }
