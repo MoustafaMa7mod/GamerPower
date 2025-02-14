@@ -9,10 +9,13 @@ import SwiftUI
 
 struct CarouselScrollView: View {
     
-    @State var items: [GiveawayItemPresentationModel]
     private let viewHeight: CGFloat = 220
 
+    var items: [GiveawayItemPresentationModel]
+    let tappedAction: (GiveawayItemPresentationModel) -> Void
+
     var body: some View {
+        
            ScrollView(.horizontal, showsIndicators: false) {
                
                HStack(spacing: -10) {
@@ -31,6 +34,9 @@ struct CarouselScrollView: View {
                                    .degrees(rotation),
                                    axis: (x: 0, y: 1, z: 0)
                                )
+                               .onTapGesture {
+                                   tappedAction(item)
+                               }
                        }
                        .frame(width: UIScreen.main.bounds.width * 0.92, height: viewHeight)
                    }

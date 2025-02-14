@@ -39,7 +39,7 @@ class AppCoordinator: Coordinator {
     }
     
     func navigateToMoreView(items: [String: [GiveawayItemPresentationModel]]) {
-        let view = factory.makeMoreCategoriesView(items: items)
+        let view = factory.makeMoreCategoriesView(items: items, coordinator: self)
         view.title = "Categories"
         navigationController.pushViewController(view, animated: true)
     }

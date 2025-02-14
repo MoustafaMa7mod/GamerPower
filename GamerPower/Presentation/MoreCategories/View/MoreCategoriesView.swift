@@ -7,15 +7,10 @@
 
 import SwiftUI
 
-struct MoreCategoriesView: View {
+struct MoreCategoriesView<ViewModel>: View where ViewModel: DefaultMoreCategoriesView {
     
-    @State var items: [String: [GiveawayItemPresentationModel]]
-    private var viewHeight: CGFloat
-    
-    init(items: [String : [GiveawayItemPresentationModel]] = [:], viewHeight: CGFloat = 220) {
-        self.items = items
-        self.viewHeight = viewHeight
-    }
+    @StateObject var viewModel: ViewModel
+    private let viewHeight: CGFloat = 220
     
     var body: some View {
         
@@ -30,7 +25,7 @@ struct MoreCategoriesView: View {
     
     var sectionsView: some View {
         
-        ForEach(items.keys.sorted(), id: \.self) { category in
+        ForEach(viewModel.items.keys.sorted(), id: \.self) { category in
             
             Section(header: Text(category)
                 .font(.headline)
@@ -38,9 +33,12 @@ struct MoreCategoriesView: View {
                 .padding(.bottom, 2)
             ) {
                 
-                if let categories = items[category] {
+                if let categories = viewModel.items[category] {
                     
-                    CarouselScrollView(items: categories)
+                    CarouselScrollView(
+                        items: categories) { item in
+                            viewModel.navigateToDetails(item: item)
+                        }
                         .padding(.top, 0)
                 }
             }

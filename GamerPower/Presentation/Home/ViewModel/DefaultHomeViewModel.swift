@@ -9,10 +9,6 @@ import Foundation
 import Domain
 
 final class DefaultHomeViewModel: HomeViewModel {
-
-    private var useCase: GetGiveawaysUseCase
-    private var maxCategoriesNumber: Int = 3
-    private weak var coordinator: AppCoordinator?
     
     private(set) var giveawayItems: [GiveawayItemPresentationModel] = []
     private(set) var moreCategoriesGiveaways: [String: [GiveawayItemPresentationModel]] = [:]
@@ -21,6 +17,10 @@ final class DefaultHomeViewModel: HomeViewModel {
     private(set) var isLoading: Bool = true
     private(set) var isShowError: Bool = false
     private(set) var errorMessage: String?
+
+    private var useCase: GetGiveawaysUseCase
+    private var maxCategoriesNumber: Int = 3
+    private weak var coordinator: AppCoordinator?
 
     init(useCase: GetGiveawaysUseCase, coordinator: AppCoordinator?) {
         self.useCase = useCase

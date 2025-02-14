@@ -48,6 +48,7 @@ struct HomeView<ViewModel>: View where ViewModel: DefaultHomeViewModel {
                     
                     Text(item)
                         .fontWeight(viewModel.selectedIndex == index ? .bold : .regular)
+                        .background(Color.red)
                         .foregroundColor(item == "More" ? .blue : .black)
                         .onTapGesture {
                             viewModel.filterTapped(with: index)
