@@ -19,6 +19,28 @@ public struct GiveawayDataModel: Codable {
     let platforms: String?
     let users: Int?
     
+    public init(
+        id: Int?,
+        title: String?,
+        worth: String?,
+        image: String?,
+        description: String?,
+        endDate: String?,
+        type: String?,
+        platforms: String?,
+        users: Int?
+    ) {
+        self.id = id
+        self.title = title
+        self.worth = worth
+        self.image = image
+        self.description = description
+        self.endDate = endDate
+        self.type = type
+        self.platforms = platforms
+        self.users = users
+    }
+    
     enum CodingKeys: String, CodingKey {
         case endDate = "end_date"
         case id, title, worth, image, description, type, platforms, users

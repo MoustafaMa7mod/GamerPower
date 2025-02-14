@@ -3,31 +3,31 @@
 
 import Moya
 
-enum API {
+public enum API {
     case urlRequest(baseURL: String, requestParameters: [String : Any])
 }
 
 extension API: NetworkTarget {
     
-    var baseURLString: String {
+    public var baseURLString: String {
         switch self {
         case .urlRequest(let baseURL, _):
             return baseURL
         }
     }
     
-    var path: String {
+    public var path: String {
         return ""
     }
     
-    var requestParameters: [String : Any] {
+    public var requestParameters: [String : Any] {
         switch self {
         case .urlRequest(_, let parameters):
             return parameters
         }
     }
     
-    var method: Moya.Method {
+    public var method: Moya.Method {
         return .get
     }
 }

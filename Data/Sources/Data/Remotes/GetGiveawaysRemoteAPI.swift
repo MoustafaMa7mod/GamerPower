@@ -13,11 +13,11 @@ public protocol GetGiveawaysRemoteAPI {
 
 public final class DefaultGetGiveawaysRemoteAPI: GetGiveawaysRemoteAPI {
     
-    private let networkService: NetworkService
+    private let networkService: Networkable
 
     // MARK: - Life cycle
     
-    public init(networkService: NetworkService) {
+    public init(networkService: Networkable) {
         self.networkService = networkService
     }
     

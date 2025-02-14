@@ -16,20 +16,20 @@ protocol NetworkTarget: TargetType {
 
 extension NetworkTarget {
     
-    var baseURL: URL {
+    public var baseURL: URL {
         guard let url = URL(string: baseURLString) else { fatalError("Invalid Base URL") }
         return url
     }
     
-    var task: Task {
+    public var task: Task {
         return .requestParameters(parameters: requestParameters, encoding: URLEncoding.queryString)
     }
     
-    var headers: [String: String]? {
+    public var headers: [String: String]? {
         return ["Content-Type": "application/json"]
     }
     
-    var sampleData: Data {
+    public var sampleData: Data {
         return Data()
     }
 }

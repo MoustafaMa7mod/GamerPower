@@ -8,22 +8,22 @@
 import Moya
 import Foundation
 
-protocol Networkable {
+public protocol Networkable {
     var provider: MoyaProvider<API> { get }
+    
+    func fetchData<T: Decodable>(requestParameters: [String: Any]) async throws -> T
 }
 
 public class NetworkService: Networkable {
     
     private var baseURL: String
-    var provider = MoyaProvider<API>(plugins: [NetworkLoggerPlugin()])
+    public var provider = MoyaProvider<API>(plugins: [NetworkLoggerPlugin()])
     
     public init (baseURL: String) {
         self.baseURL = baseURL
     }
     
-    public func fetchData<T: Decodable>(
-        requestParameters: [String : Any]
-    ) async throws -> T {
+    public func fetchData<T: Decodable>(requestParameters: [String : Any]) async throws -> T {
         let urlRequest = API.urlRequest(baseURL: baseURL, requestParameters: requestParameters)
         return try await request(request: urlRequest)
     }
