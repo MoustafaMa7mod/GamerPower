@@ -35,10 +35,7 @@ final class DefaultHomeViewModel: HomeViewModel {
         case 0: // all items not need filter data
             loadData(filterData: true)
         case (maxCategoriesNumber + 1): // Navigate to more screen
-            print("Navigate to more screen")
-            Task { @MainActor in
-                reloadView()
-            }
+            coordinator?.navigateToMoreView(items: moreCategoriesGiveaways)
         default:
             loadData(
                 filterData: true,
@@ -51,7 +48,7 @@ final class DefaultHomeViewModel: HomeViewModel {
     }
     
     func navigateToDetails(item: GiveawayItemPresentationModel) {
-        coordinator?.navigateToDetails(item: item)
+        coordinator?.navigateToDetailsView(item: item)
     }
 }
 

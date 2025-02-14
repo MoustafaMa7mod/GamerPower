@@ -32,6 +32,14 @@ final class DefaultGiveawaysFactory: GiveawaysFactory {
         let view = DetailsView(viewModel: viewModel)
         return UIHostingController(rootView: view)
     }
+    
+    func makeMoreCategoriesView(
+        items: [String: [GiveawayItemPresentationModel]]
+    ) -> UIHostingController<MoreCategoriesView> {
+        
+        let view = MoreCategoriesView(items: items)
+        return UIHostingController(rootView: view)
+    }
 }
 
 // MARK: - Giveaways Use Case Dependency Creation

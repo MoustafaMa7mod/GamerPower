@@ -27,8 +27,15 @@ class HomeCoordinator: Coordinator {
         navigationController.viewControllers = [homeView]
     }
 
-    func navigateToDetails(item: GiveawayItemPresentationModel) {
+    func navigateToDetailsView(item: GiveawayItemPresentationModel) {
         let view = factory.makeDetailsView(item: item)
+        view.title = item.gameTitle
+        navigationController.pushViewController(view, animated: true)
+    }
+    
+    func navigateToMoreView(items: [String: [GiveawayItemPresentationModel]]) {
+        let view = factory.makeMoreCategoriesView(items: items)
+        view.title = "Categories"
         navigationController.pushViewController(view, animated: true)
     }
 }
