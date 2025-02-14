@@ -32,7 +32,7 @@ final class DefaultHomeViewModel: HomeViewModel {
         switch index {
         case 0: // all items not need filter data
             loadData(filterData: true)
-        case (maxCategoriesNumber - 1): // Navigate to more screen
+        case (maxCategoriesNumber + 1): // Navigate to more screen
             print("Navigate to more screen")
             Task { @MainActor in
                 reloadView()
