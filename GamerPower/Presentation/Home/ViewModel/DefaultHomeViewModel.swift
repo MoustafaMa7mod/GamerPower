@@ -12,7 +12,7 @@ final class DefaultHomeViewModel: HomeViewModel {
 
     private var useCase: GetGiveawaysUseCase
     private var maxCategoriesNumber: Int = 3
-    private weak var coordinator: HomeCoordinator?
+    private weak var coordinator: AppCoordinator?
     private(set) var giveawayItems: [GiveawayItemPresentationModel] = []
     private(set) var moreCategoriesGiveaways: [String: [GiveawayItemPresentationModel]] = [:]
     private(set) var homeCategories: [String] = ["all"]
@@ -21,7 +21,7 @@ final class DefaultHomeViewModel: HomeViewModel {
     private(set) var isShowError: Bool = false
     private(set) var errorMessage: String?
 
-    init(useCase: GetGiveawaysUseCase, coordinator: HomeCoordinator?) {
+    init(useCase: GetGiveawaysUseCase, coordinator: AppCoordinator?) {
         self.useCase = useCase
         self.coordinator = coordinator
         
@@ -35,10 +35,7 @@ final class DefaultHomeViewModel: HomeViewModel {
         case 0: // all items not need filter data
             loadData(filterData: true)
         case (maxCategoriesNumber + 1): // Navigate to more screen
-            print("Navigate to more screen")
-            Task { @MainActor in
-                reloadView()
-            }
+            coordinator?.navigateToMoreView(items: moreCategoriesGiveaways)
         default:
             loadData(
                 filterData: true,
@@ -51,7 +48,7 @@ final class DefaultHomeViewModel: HomeViewModel {
     }
     
     func navigateToDetails(item: GiveawayItemPresentationModel) {
-        coordinator?.navigateToDetails(item: item)
+        coordinator?.navigateToDetailsView(item: item)
     }
 }
 

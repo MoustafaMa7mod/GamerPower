@@ -13,7 +13,7 @@ import SwiftUI
 final class DefaultGiveawaysFactory: GiveawaysFactory {
 
     func makeHomeView(
-        coordinator: HomeCoordinator?
+        coordinator: AppCoordinator?
     ) -> UIHostingController<HomeView<DefaultHomeViewModel>> {
         
         let viewModel = DefaultHomeViewModel(
@@ -30,6 +30,14 @@ final class DefaultGiveawaysFactory: GiveawaysFactory {
         
         let viewModel = DefaultDetailsViewModel(item: item)
         let view = DetailsView(viewModel: viewModel)
+        return UIHostingController(rootView: view)
+    }
+    
+    func makeMoreCategoriesView(
+        items: [String: [GiveawayItemPresentationModel]]
+    ) -> UIHostingController<MoreCategoriesView> {
+        
+        let view = MoreCategoriesView(items: items)
         return UIHostingController(rootView: view)
     }
 }

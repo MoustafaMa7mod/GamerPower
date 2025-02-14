@@ -11,18 +11,36 @@ import UIKit
 class AppCoordinator: Coordinator {
     
     let window: UIWindow
-    var childCoordinators: [Coordinator] = []
+    let factory: DefaultGiveawaysFactory
+    let navigationController: UINavigationController
 
-    init(window: UIWindow) {
+    init(
+        window: UIWindow,
+        navigationController: UINavigationController = UINavigationController(),
+        factory: DefaultGiveawaysFactory = DefaultGiveawaysFactory()
+    ) {
         self.window = window
+        self.navigationController = navigationController
+        self.factory = factory
     }
     
     func start() {
-        let navigationController = UINavigationController()
-        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
-        childCoordinators.append(homeCoordinator)
-        homeCoordinator.start()
+        
+        let homeView = factory.makeHomeView(coordinator: self)
+        navigationController.viewControllers = [homeView]
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
+    }
+    
+    func navigateToDetailsView(item: GiveawayItemPresentationModel) {
+        let view = factory.makeDetailsView(item: item)
+        view.title = item.gameTitle
+        navigationController.pushViewController(view, animated: true)
+    }
+    
+    func navigateToMoreView(items: [String: [GiveawayItemPresentationModel]]) {
+        let view = factory.makeMoreCategoriesView(items: items)
+        view.title = "Categories"
+        navigationController.pushViewController(view, animated: true)
     }
 }

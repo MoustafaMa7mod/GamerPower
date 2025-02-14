@@ -11,10 +11,14 @@ import SwiftUI
 protocol GiveawaysFactory {
     
     func makeHomeView(
-        coordinator: HomeCoordinator?
+        coordinator: AppCoordinator?
     ) -> UIHostingController<HomeView<DefaultHomeViewModel>>
     
     func makeDetailsView(
         item: GiveawayItemPresentationModel
     ) -> UIHostingController<DetailsView<DefaultDetailsViewModel>>
+
+    func makeMoreCategoriesView(
+        items: [String: [GiveawayItemPresentationModel]]
+    ) -> UIHostingController<MoreCategoriesView>
 }

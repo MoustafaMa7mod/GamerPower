@@ -9,18 +9,13 @@ import SwiftUI
 
 struct MoreCategoriesView: View {
     
-    @State var moreCategoriesGiveaways: [String: [GiveawayItemPresentationModel]] = [:]
+    @State var items: [String: [GiveawayItemPresentationModel]] = [:]
     
     var body: some View {
         
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
-                    Text("Categories")
-                        .font(.largeTitle)
-                        .bold()
-                        .padding(.horizontal)
-                    let items = moreCategoriesGiveaways
                     ForEach(items.keys.sorted(), id: \.self) { category in
                         Section(header: Text(category)
                             .font(.headline)
@@ -28,7 +23,7 @@ struct MoreCategoriesView: View {
                         ) {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 HStack {
-                                    ForEach(moreCategoriesGiveaways[category] ?? []) { giveaway in
+                                    ForEach(items[category] ?? []) { giveaway in
                                         GiveawayCard(item: giveaway)
                                     }
                                 }
