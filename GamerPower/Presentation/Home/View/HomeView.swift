@@ -45,14 +45,16 @@ struct HomeView<ViewModel>: View where ViewModel: DefaultHomeViewModel {
             
             HStack(spacing: 10) {
                 ForEach(Array(viewModel.homeCategories.enumerated()), id: \.element) { index, item in
-                    
-                    Text(item)
-                        .fontWeight(viewModel.selectedIndex == index ? .bold : .regular)
-                        .background(Color.red)
-                        .foregroundColor(item == "More" ? .blue : .black)
-                        .onTapGesture {
-                            viewModel.filterTapped(with: index)
-                        }
+                    VStack(alignment: .center, spacing: 0) {
+                        Text(item)
+                            .fontWeight(
+                                viewModel.selectedIndex == index ? .bold : .regular
+                            )
+                            .foregroundColor(item == "More" ? .blue : .black)
+                            .onTapGesture {
+                                viewModel.filterTapped(with: index)
+                            }
+                    }
                 }
             }
         }
