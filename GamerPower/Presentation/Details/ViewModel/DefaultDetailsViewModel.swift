@@ -15,5 +15,4 @@ final class DefaultDetailsViewModel: DetailsViewModel {
     init(item: GiveawayItemPresentationModel) {
         self.item = item
     }
-    
 }

@@ -17,6 +17,8 @@ protocol HomeViewModel: ObservableObject {
     var isShowError: Bool { get }
     var errorMessage: String? { get }
     
+    func fetchHomeData(filterData: Bool, queryParameter: String?) async throws
+    func loadHomeCategories(filterData: Bool)
     func filterTapped(with index: Int)
     func navigateToDetails(item: GiveawayItemPresentationModel)
 }

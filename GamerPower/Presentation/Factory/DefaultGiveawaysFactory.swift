@@ -36,9 +36,9 @@ final class DefaultGiveawaysFactory: GiveawaysFactory {
     func makeMoreCategoriesView(
         items: [String: [GiveawayItemPresentationModel]],
         coordinator: AppCoordinator?
-    ) -> UIHostingController<MoreCategoriesView<DefaultMoreCategoriesView>> {
+    ) -> UIHostingController<MoreCategoriesView<DefaultMoreCategoriesViewModel>> {
         
-        let viewModel = DefaultMoreCategoriesView(
+        let viewModel = DefaultMoreCategoriesViewModel(
             items: items,
             coordinator: coordinator
         )

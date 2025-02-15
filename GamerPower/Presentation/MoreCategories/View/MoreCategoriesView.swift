@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MoreCategoriesView<ViewModel>: View where ViewModel: DefaultMoreCategoriesView {
+struct MoreCategoriesView<ViewModel>: View where ViewModel: DefaultMoreCategoriesViewModel {
     
     @StateObject var viewModel: ViewModel
     private let viewHeight: CGFloat = 220

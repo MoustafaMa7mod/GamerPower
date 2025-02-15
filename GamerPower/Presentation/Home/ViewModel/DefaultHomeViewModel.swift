@@ -26,7 +26,7 @@ final class DefaultHomeViewModel: HomeViewModel {
         self.useCase = useCase
         self.coordinator = coordinator
         
-        loadData(filterData: false)
+        loadHomeData(filterData: false)
     }
     
     func filterTapped(with index: Int) {
@@ -34,11 +34,11 @@ final class DefaultHomeViewModel: HomeViewModel {
         
         switch index {
         case 0: // all items not need filter data
-            loadData(filterData: true)
+            loadHomeData(filterData: true)
         case (maxCategoriesNumber + 1): // Navigate to more screen
             coordinator?.navigateToMoreView(items: moreCategoriesGiveaways)
         default:
-            loadData(
+            loadHomeData(
                 filterData: true,
                 queryParameter: homeCategories[index].lowercased().replacingOccurrences(
                     of: " ",
@@ -53,20 +53,47 @@ final class DefaultHomeViewModel: HomeViewModel {
     }
 }
 
+// MARK: - HomeViewModel
+extension DefaultHomeViewModel {
+    
+    func fetchHomeData(filterData: Bool, queryParameter: String? = nil) async throws {
+        let items = try await useCase.execute(queryParameter: queryParameter)
+        giveawayItems = items.map { GiveawayItemPresentationModel(model: $0) }
+        loadHomeCategories(filterData: filterData)
+    }
+    
+    func loadHomeCategories(filterData: Bool) {
+        
+        if !filterData {
+            let allCategories = giveawayItems.flatMap {
+                $0.categoryName.components(separatedBy: ", ")
+            }
+            
+            let categoryItems = Array(Set(allCategories)).sorted()
+            
+            homeCategories.append(contentsOf: categoryItems.prefix(maxCategoriesNumber))
+        
+            if categoryItems.count > maxCategoriesNumber {
+                homeCategories.append("More")
+            }
+            
+            moreCategories()
+        }
+    }
+}
+
 // MARK: - Private Methods
 extension DefaultHomeViewModel {
     
-    func loadData(filterData: Bool, queryParameter: String? = nil) {
+    private func loadHomeData(filterData: Bool, queryParameter: String? = nil) {
         
         Task(priority: .background) {
+            
             await resetView()
             do {
-                let items = try await useCase.execute(queryParameter: queryParameter)
-                giveawayItems = items.map { GiveawayItemPresentationModel(model: $0) }
-                loadHomeCategories(filterData: filterData)
-                
+                try await fetchHomeData(filterData: filterData, queryParameter: queryParameter)
                 await reloadView()
-            } catch let error {
+            } catch {
                 await handleResponseError(error)
             }
         }
@@ -94,25 +121,7 @@ extension DefaultHomeViewModel {
         errorMessage = nil
     }
     
-    private func loadHomeCategories(filterData: Bool) {
-        
-        if !filterData {
-            let allCategories = giveawayItems.flatMap {
-                $0.categoryName.components(separatedBy: ", ")
-            }
-            let categoryItems = Array(Set(allCategories)).sorted()
-            
-            homeCategories.append(contentsOf: categoryItems.prefix(maxCategoriesNumber))
-        
-            if categoryItems.count > maxCategoriesNumber {
-                homeCategories.append("More")
-            }
-            
-            moreCategorizeGiveaways()
-        }
-    }
-
-    private func moreCategorizeGiveaways() {
+    private func moreCategories() {
 
         for giveaway in giveawayItems {
             

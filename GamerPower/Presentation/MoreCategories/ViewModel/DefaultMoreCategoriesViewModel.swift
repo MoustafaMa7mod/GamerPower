@@ -1,11 +1,11 @@
 //
-//  DefaultMoreCategoriesView.swift
+//  DefaultMoreCategoriesViewModel.swift
 //  GamerPower
 //
 //  Created by Mostafa Mahmoud on 14/02/2025.
 //
 
-final class DefaultMoreCategoriesView: MoreCategoriesViewModel {
+final class DefaultMoreCategoriesViewModel: MoreCategoriesViewModel {
 
     private(set) var items: [String: [GiveawayItemPresentationModel]] = [:]
     
