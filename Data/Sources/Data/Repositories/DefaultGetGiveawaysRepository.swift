@@ -13,12 +13,13 @@ public final class DefaultGetGiveawaysRepository: GiveawaysRepository {
     private let remote: GetGiveawaysRemoteAPI
 
     // MARK: - Methods
-    
     public init(remote: GetGiveawaysRemoteAPI) {
         self.remote = remote
     }
 
-    public func fetchGetGiveaways(queryParameter: String?) async throws -> [GiveawayItem] {
+    public func fetchGetGiveaways(
+        queryParameter: String?
+    ) async throws -> [GiveawayItem] {
         
         let response = try await remote.fetchGetGiveaways(queryParameter: queryParameter)
         return response.map { $0.toDomain() }

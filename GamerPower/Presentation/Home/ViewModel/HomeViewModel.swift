@@ -9,6 +9,7 @@ import SwiftUI
 
 protocol HomeViewModel: ObservableObject {
    
+    // MARK: - Properties
     var giveawayItems: [GiveawayItemPresentationModel] { get }
     var homeCategories: [String] { get }
     var moreCategoriesGiveaways: [String: [GiveawayItemPresentationModel]] { get }
@@ -17,6 +18,7 @@ protocol HomeViewModel: ObservableObject {
     var isShowError: Bool { get }
     var errorMessage: String? { get }
     
+    // MARK: - Methods
     func fetchHomeData(filterData: Bool, queryParameter: String?) async throws
     func loadHomeCategories(filterData: Bool)
     func filterTapped(with index: Int)

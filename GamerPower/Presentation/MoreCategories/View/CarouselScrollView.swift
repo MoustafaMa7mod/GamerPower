@@ -10,9 +10,9 @@ import SwiftUI
 struct CarouselScrollView: View {
     
     private let viewHeight: CGFloat = 220
-    let tappedAction: (GiveawayItemPresentationModel) -> Void
-
+    
     var items: [GiveawayItemPresentationModel]
+    let tappedAction: (GiveawayItemPresentationModel) -> Void
 
     /// A horizontally scrolling stack of giveaway cards with a 3D rotation effect.
     /// The cards dynamically rotate based on their position in the scroll view.

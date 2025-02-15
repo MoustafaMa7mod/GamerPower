@@ -15,13 +15,10 @@ public final class DefaultGetGiveawaysUseCase: GetGiveawaysUseCase {
     // MARK: - Properties
     private let repository: GiveawaysRepository
 
-    // MARK: - Life cycle
-    
+    // MARK: - Methods
     public init(repository: GiveawaysRepository) {
         self.repository = repository
     }
-
-    // MARK: - Methods
     
     public func execute(queryParameter: String?) async throws -> [GiveawayItem] {
         

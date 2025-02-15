@@ -8,8 +8,10 @@
 import SwiftUI
 
 protocol MoreCategoriesViewModel: ObservableObject {
-   
+    
+    // MARK: - Properties
     var items: [String: [GiveawayItemPresentationModel]] { get }
     
+    // MARK: - Methods
     func navigateToDetails(item: GiveawayItemPresentationModel)
 }

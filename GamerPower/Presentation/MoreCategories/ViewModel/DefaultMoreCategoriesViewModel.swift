@@ -7,10 +7,12 @@
 
 final class DefaultMoreCategoriesViewModel: MoreCategoriesViewModel {
 
+    // MARK: - Properties
     private(set) var items: [String: [GiveawayItemPresentationModel]] = [:]
     
     private weak var coordinator: AppCoordinator?
 
+    // MARK: - Methods
     init(
         items: [String: [GiveawayItemPresentationModel]],
         coordinator: AppCoordinator?

@@ -10,6 +10,7 @@ import Domain
 
 final class DefaultHomeViewModel: HomeViewModel {
     
+    // MARK: - Properties
     private(set) var giveawayItems: [GiveawayItemPresentationModel] = []
     private(set) var moreCategoriesGiveaways: [String: [GiveawayItemPresentationModel]] = [:]
     private(set) var homeCategories: [String] = ["all"]
@@ -22,6 +23,7 @@ final class DefaultHomeViewModel: HomeViewModel {
     private var maxCategoriesNumber: Int = 3
     private weak var coordinator: AppCoordinator?
 
+    // MARK: - Methods
     init(useCase: GetGiveawaysUseCase, coordinator: AppCoordinator?) {
         self.useCase = useCase
         self.coordinator = coordinator
@@ -60,7 +62,7 @@ final class DefaultHomeViewModel: HomeViewModel {
     }
 }
 
-// MARK: - HomeViewModel
+// MARK: - HomeViewModel Protocol
 extension DefaultHomeViewModel {
     
     func fetchHomeData(filterData: Bool, queryParameter: String? = nil) async throws {

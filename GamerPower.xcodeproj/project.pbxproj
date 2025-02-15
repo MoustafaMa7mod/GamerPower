@@ -30,8 +30,6 @@
 		999D98382D5F83E200BF9432 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		999D98392D5F83E600BF9432 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
 		999D983A2D5F83E900BF9432 /* NetworkLayer */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkLayer; sourceTree = "<group>"; };
-		999D99EE2D5FE83D00BF9432 /* NetworkLayer.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = NetworkLayer.xctestplan; sourceTree = "<group>"; };
-		999D9A7A2D5FF78200BF9432 /* Domain.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Domain.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -86,8 +84,6 @@
 		999D97BC2D5F83B300BF9432 = {
 			isa = PBXGroup;
 			children = (
-				999D99EE2D5FE83D00BF9432 /* NetworkLayer.xctestplan */,
-				999D9A7A2D5FF78200BF9432 /* Domain.xctestplan */,
 				999D983A2D5F83E900BF9432 /* NetworkLayer */,
 				999D98392D5F83E600BF9432 /* Data */,
 				999D98382D5F83E200BF9432 /* Domain */,
