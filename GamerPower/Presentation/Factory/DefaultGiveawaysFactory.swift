@@ -47,7 +47,7 @@ final class DefaultGiveawaysFactory: GiveawaysFactory {
     }
 }
 
-// MARK: - Giveaways Use Case Dependency Creation
+// MARK: - Giveaways View Model Dependency Creation
 extension DefaultGiveawaysFactory {
     
     private func makeGetGiveawaysUseCase() -> GetGiveawaysUseCase {

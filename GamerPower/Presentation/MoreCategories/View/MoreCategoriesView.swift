@@ -23,6 +23,10 @@ struct MoreCategoriesView<ViewModel>: View where ViewModel: DefaultMoreCategorie
         .padding(.top, 12)
     }
     
+    /// Displays a list of giveaway categories, each containing a horizontally scrollable carousel of giveaway items.
+    ///
+    /// The categories are dynamically sorted and displayed as sections, where each section has a header
+    /// with the category name. The items within each category are presented using `CarouselScrollView`.
     var sectionsView: some View {
         
         ForEach(viewModel.items.keys.sorted(), id: \.self) { category in

@@ -29,13 +29,20 @@ final class DefaultHomeViewModel: HomeViewModel {
         loadHomeData(filterData: false)
     }
     
+    /// Handles the selection of a category filter based on the given index.
+    ///
+    /// - When **index = 0**, it loads all giveaway items without filtering.
+    /// - When **index = (maxCategoriesNumber + 1)**, it navigates to the "More Categories" screen.
+    /// - Otherwise, it applies a filter based on the selected category and updates the displayed items.
+    ///
+    /// - Parameter index: The index of the selected filter.
     func filterTapped(with index: Int) {
         selectedIndex = index
         
         switch index {
-        case 0: // all items not need filter data
+        case 0:
             loadHomeData(filterData: true)
-        case (maxCategoriesNumber + 1): // Navigate to more screen
+        case (maxCategoriesNumber + 1):
             coordinator?.navigateToMoreView(items: moreCategoriesGiveaways)
         default:
             loadHomeData(
@@ -62,6 +69,13 @@ extension DefaultHomeViewModel {
         loadHomeCategories(filterData: filterData)
     }
     
+    /// Loads and organizes giveaway categories for display on the home screen.
+    ///
+    /// - If `filterData` is `false`, the function extracts all unique categories from `giveawayItems`,
+    ///   limits the number of displayed categories, and stores additional ones separately.
+    /// - If the number of unique categories exceeds `maxCategoriesNumber`, a "More" category is added.
+    ///
+    /// - Parameter filterData: A Boolean value indicating added more categories or not.
     func loadHomeCategories(filterData: Bool) {
         
         if !filterData {
@@ -121,12 +135,18 @@ extension DefaultHomeViewModel {
         errorMessage = nil
     }
     
+    /// Organizes giveaways into additional categories that are not part of `homeCategories`.
+    ///
+    /// - This method iterates through all `giveawayItems` and extracts their category names.
+    /// - If a category is **not already included** in `homeCategories`,
+    ///   the corresponding giveaways are grouped under `moreCategoriesGiveaways`.
     private func moreCategories() {
 
         for giveaway in giveawayItems {
-            
+            // Extract multiple category names from the giveaway item
             let categories = giveaway.categoryName.components(separatedBy: ", ")
             for category in categories {
+                // If the category is not in the main home categories, add it to the additional categories
                 if !homeCategories.contains(category) {
                     moreCategoriesGiveaways[category, default: []].append(giveaway)
                 }
