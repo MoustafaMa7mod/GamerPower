@@ -8,9 +8,9 @@
 import SwiftUI
 import Kingfisher
 
-struct DetailsView<ViewModel>: View where ViewModel: DefaultDetailsViewModel {
+struct DetailsView: View {
     
-    @StateObject var viewModel: ViewModel
+    var item: GiveawayItemPresentationModel
     
     var body: some View {
         
@@ -58,7 +58,7 @@ struct DetailsView<ViewModel>: View where ViewModel: DefaultDetailsViewModel {
     @ViewBuilder
     var gameImage: some View {
         
-        if let image = viewModel.item.gameImage {
+        if let image = item.gameImage {
             
             KFImage(image)
                 .placeholder {
@@ -80,7 +80,7 @@ struct DetailsView<ViewModel>: View where ViewModel: DefaultDetailsViewModel {
     
     var gameTitle: some View {
         
-        Text(viewModel.item.gameTitle)
+        Text(item.gameTitle)
             .font(.system(size: 18, weight: .heavy))
             .foregroundColor(.white)
             .frame(alignment: .leading)
@@ -94,7 +94,7 @@ struct DetailsView<ViewModel>: View where ViewModel: DefaultDetailsViewModel {
                 .scaledToFit()
                 .frame(width: 25, height: 25)
             
-            Text(viewModel.item.gamePrice)
+            Text(item.gamePrice)
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(.black)
         }
@@ -109,7 +109,7 @@ struct DetailsView<ViewModel>: View where ViewModel: DefaultDetailsViewModel {
                 .scaledToFit()
                 .frame(width: 25, height: 25)
             
-            Text(viewModel.item.numberOfUsers)
+            Text(item.numberOfUsers)
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(.black)
         }
@@ -124,7 +124,7 @@ struct DetailsView<ViewModel>: View where ViewModel: DefaultDetailsViewModel {
                 .scaledToFit()
                 .frame(width: 25, height: 25)
             
-            Text(viewModel.item.gameType)
+            Text(item.gameType)
                 .font(.system(size: 14, weight: .medium))
                 .foregroundColor(.black)
         }
@@ -145,7 +145,7 @@ struct DetailsView<ViewModel>: View where ViewModel: DefaultDetailsViewModel {
                 .font(.system(size: 16, weight: .bold))
                 .foregroundColor(.black)
             
-            Text(viewModel.item.categoryName)
+            Text(item.categoryName)
                 .font(.system(size: 14, weight: .light))
                 .foregroundColor(.black)
         }
@@ -159,7 +159,7 @@ struct DetailsView<ViewModel>: View where ViewModel: DefaultDetailsViewModel {
                 .font(.system(size: 16, weight: .bold))
                 .foregroundColor(.black)
             
-            Text(viewModel.item.giveawayEndData)
+            Text(item.giveawayEndData)
                 .font(.system(size: 14, weight: .light))
                 .foregroundColor(.black)
         }
@@ -173,7 +173,7 @@ struct DetailsView<ViewModel>: View where ViewModel: DefaultDetailsViewModel {
                 .font(.system(size: 16, weight: .bold))
                 .foregroundColor(.black)
             
-            Text(viewModel.item.gameDescription)
+            Text(item.gameDescription)
                 .font(.system(size: 14, weight: .light))
                 .foregroundColor(.black)
         }

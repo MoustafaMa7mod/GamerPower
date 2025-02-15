@@ -16,7 +16,7 @@ protocol GiveawaysFactory {
     
     func makeDetailsView(
         item: GiveawayItemPresentationModel
-    ) -> UIHostingController<DetailsView<DefaultDetailsViewModel>>
+    ) -> UIHostingController<DetailsView>
     
     func makeMoreCategoriesView(
         items: [String: [GiveawayItemPresentationModel]],

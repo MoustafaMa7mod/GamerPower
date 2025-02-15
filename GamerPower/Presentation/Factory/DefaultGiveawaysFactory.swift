@@ -26,10 +26,9 @@ final class DefaultGiveawaysFactory: GiveawaysFactory {
     
     func makeDetailsView(
         item: GiveawayItemPresentationModel
-    ) -> UIHostingController<DetailsView<DefaultDetailsViewModel>> {
+    ) -> UIHostingController<DetailsView> {
         
-        let viewModel = DefaultDetailsViewModel(item: item)
-        let view = DetailsView(viewModel: viewModel)
+        let view = DetailsView(item: item)
         return UIHostingController(rootView: view)
     }
     

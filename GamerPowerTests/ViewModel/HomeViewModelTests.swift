@@ -82,7 +82,6 @@ final class HomeViewModelTests: XCTestCase {
         }
     }
     
-    
     private func mockGiveawayItemPresentationModel() -> [GiveawayItemPresentationModel] {
         mockUseCase.makeMockResponse().map { GiveawayItemPresentationModel(model: $0) }
     }
